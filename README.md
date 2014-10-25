@@ -1,3 +1,7 @@
+# WTF?
+
+We want to be able to share screens so we can see what we're doing, and we want to be able to code and mess around using Linux. We also want to be able to do that without messing up our computers. So below are instructions on how to set this all up.
+
 # Download skype
 
 Windows
@@ -85,4 +89,46 @@ Now we're going to configure our vagrant virtual machine manager a bit by hand, 
 config.vm.synced_folder "violentpython", "/violentpython"
 ```  
 
+Start up the virtual machine and login to it.
 
+```
+vagrant up
+vagrant ssh
+```
+
+Now you will be able to share files between Windows and the virtualized Linux operating system. We can test it out.
+
++ Open up SublimeText and type one line:
+
+```python
+print "I'm a python script."
+```
++ Go to `File -> Save`
++ Navigate to C:\<username>\vagrant_ubuntu\violentpython
++ In the `Name:` field, type the name of the file as `test.py`.
++ Hit the `Save` button.
+
+Just notice one thing - that the text in SublimeText is now colored. This is because SublimeText now recognizes that this is a Python file, because of the `.py` at the end of the filename.
+
+Anyway, since we saved this `test.py` to the `violentpython` folder, we should now be able to see it in our virtualized Linux environment. Let's check.
+
++ At the Linux command prompt, type `ls -l /violentpython`.
+
+You should see something like this:
+
+```bash
+vagrant@vagrant-ubuntu-trusty-32:~$ ls -l /violentpython
+total 4
+-rw-rw-r-- 1 vagrant vagrant 27 Oct 25 18:07 test.py
+```
+
+There's your `test.py` file. `ls` is a Linux command that means "list files". Google it for more information, if you want.
+
+Now we can **run** the script. from within the same Linux environment, by typing the following:
+
+```bash
+vagrant@vagrant-ubuntu-trusty-32:~$ python /violentpython/test.py 
+I'm a python script
+```
+
+And you'll see the output `I'm a python script`. That is, of course, the script you wrote.
