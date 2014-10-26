@@ -36,7 +36,6 @@ We choose a popular Linux distribution to start with. Here are the steps.
 mkdir vagrant-ubuntu
 cd vagrant-ubuntu
 vagrant init ubuntu/trusty32
-vagrant up
 ```
 
 What you did here was create a virtual Linux environment that you will be able to work in. Now let's start it up and login to it. Type the following:
