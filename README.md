@@ -19,6 +19,10 @@ Virtualbox actually runs our virtual environment.
 + Download it from [here](https://www.virtualbox.org/wiki/Downloads). For Windows, it will be the "Windows hosts" link on that page.
 + Install it.
 
+# Get an SSH client
+
+We are going to use PuTTY. Download it [here](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
+
 # Create a virtualbox and manage it with Vagrant
 
 We choose a popular Linux distribution to start with. Here are the steps.
