@@ -132,3 +132,29 @@ I'm a python script
 ```
 
 And you'll see the output `I'm a python script`. That is, of course, the script you wrote.
+
+# Setting up an FTP server
+
+We need to set up an FTP server for use with the book. Since we are using Ubuntu for in the virtual environment, we choose the server [vsftp](https://help.ubuntu.com/10.04/serverguide/ftp-server.html). The following will set up your server:
+
+```
+vagrant@vagrant-ubuntu-trusty-32:~$ sudo apt-get install vsftpd
+# ... some noise about the installation going on ...
+Setting up vsftpd (3.0.2-1ubuntu2.14.04.1) ...
+vsftpd start/running, process 8095
+Processing triggers for ureadahead (0.100.0-16) ...
+```
+
+That last line says that the FTP server `vsftpd` is up and running. Let's try to connect to it to make sure it really is. FTP servers, by default, run on port 21. This is how we check:
+
+```
+vagrant@vagrant-ubuntu-trusty-32:~$ telnet 127.0.0.1 21
+Trying 127.0.0.1...
+Connected to 127.0.0.1.
+Escape character is '^]'.
+220 (vsFTPd 3.0.2)
+```
+
+After typing `telnet 127.0.0.1 21`, you can see that it is connected. Now type Control-] (the right bracket), and hit enter. Then type `quit` to get out of `telnet`.
+
+
