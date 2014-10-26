@@ -2,16 +2,7 @@
 
 We want to be able to share screens so we can see what we're doing, and we want to be able to code and mess around using Linux. We also want to be able to do that without messing up our computers. So below are instructions on how to set this all up.
 
-# Download skype
-
-Windows
-
-[Debian](https://wiki.debian.org/skype)
-
-etc...
-
-# Acquire Violent Python
-
+# Get Violent Python Book
 There is a PDF out there that I cannot put here. Otherwise, [purchase at Amazon](http://amzn.com/1597499579 ).
 
 # Get Vagrant
