@@ -151,4 +151,11 @@ Escape character is '^]'.
 
 After typing `telnet 127.0.0.1 21`, you can see that it is connected. Now type Control-] (the right bracket), and hit enter. Then type `quit` to get out of `telnet`.
 
+# Install Git
 
+For saving and versioning code, we use the code revisioning system called `git`.
+
++ Install it: `sudo apt-get install git`
++ Go to the share `/violentpython`
++ Type `git init`
++ Link this `git` directory to your online github account by typing `git clone <https://github.com/<username>/violentpython.git` where `username` is your github username.
